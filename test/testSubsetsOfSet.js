@@ -9,7 +9,9 @@ const testSubsetsOfSet = function (set, expectedSet, message) {
 };
 
 const subsetsOfSetTests = function () {
-  testSubsetsOfSet([], [[]], 'An empty array');
+  testSubsetsOfSet([], [[]], 'An empty set');
+  testSubsetsOfSet([1], [[], [1]], 'A set with one element');
+  testSubsetsOfSet([1, 2], [[], [1], [2], [1, 2]], 'A set with two element');
 };
 
 subsetsOfSetTests();
